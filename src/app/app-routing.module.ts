@@ -12,7 +12,11 @@ export const routes: Routes = [
       { path: '', redirectTo: '/epub/estadisticas', pathMatch: 'full' },
       {
         path: 'epub',
-        loadChildren: () => import('./dashboards/dashboard.module').then((m) => m.DashboardModule),
+        loadChildren: () => import('./routes/dashboards/dashboard.module').then((m) => m.DashboardModule),
+      },
+      {
+        path: 'formula-one',
+        loadChildren: () => import('./routes/formula-one/formula-one.module').then((m) => m.FormulaOneModule),
       },
     ],
   },

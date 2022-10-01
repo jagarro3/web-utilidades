@@ -7,7 +7,7 @@ import { FormulaOneApiService } from '../../../core/data-service/formula-one-api
 @Injectable({
   providedIn: 'root',
 })
-export class EpubService {
+export class FormulaOneService {
   constructor(
     public formulaOneApiService: FormulaOneApiService,
     private constructorStandingAdapter: ConstructorStandingAdapter

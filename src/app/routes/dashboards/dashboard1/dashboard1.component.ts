@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Subscription } from 'rxjs';
-import { EpubInfoModel } from '../../shared/models/epub-info.model';
-import { EpubService } from '../../shared/services/epub.service';
+import { EpubInfoModel } from '../../../shared/models/epub-info.model';
+import { EpubService } from '../../../shared/services/epub.service';
 
 @Component({
   templateUrl: './dashboard1.component.html',

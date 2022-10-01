@@ -30,5 +30,14 @@ export const ROUTES: RouteInfo[] = [
                 submenu: []
             }
         ]
+    },
+    {
+        path: '/formula-one',
+        title: 'Fórmula 1',
+        icon: 'fa fa-book',
+        class: '',
+        labelClass: 'label label-rouded label-themecolor',
+        extralink: false,
+        submenu: []
     }
 ];

@@ -19,8 +19,8 @@ export class ConstructorStandingAdapter implements Adapter<ConstructorStanding> 
     constructorStanding.position = item.position;
 
     constructorStanding.constructorInfo = new ConstructorInfo();
-    constructorStanding.constructorInfo.team_id = item.team_id;
-    constructorStanding.constructorInfo.team_name = item.team_name;
+    constructorStanding.constructorInfo.teamId = item.team_id;
+    constructorStanding.constructorInfo.teamName = item.team_name;
 
     return constructorStanding;
   }

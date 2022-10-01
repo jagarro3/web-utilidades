@@ -60,7 +60,7 @@ export class FormulaOneApiService {
     return this.http
       .get(`${environment.apiFormulaOne.url}${path}`, { headers: this.setHeaders(), params: params })
       .pipe(
-        map((res: Object) => res),
+        map((res: any) => res.results),
         catchError((error: HttpErrorResponse) => this.formatErrors(error))
       );
   }
