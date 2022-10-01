@@ -1,0 +1,115 @@
+<div class="row">
+  <!-- Settings -->
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Configuración</h4>
+        <div class="row p-t-20">
+          <div class="col-md-3">
+            <div class="form-group mb-0">
+              <label class="control-label">Libro EPUB</label>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input
+                    type="file"
+                    class="custom-file-input"
+                    (change)="onFileChange($event.target.files)"
+                    #fileInput
+                  />
+                  <label class="custom-file-label" #labelImport>Selecciona libro .epub</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group mb-0">
+              <label class="control-label">Número 'más frecuentes'</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Número"
+                [(ngModel)]="numFreq"
+                (change)="onFileChange(fileInput)"
+                max="23"
+                min="2"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-12" *ngIf="epubInfo != null">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{ epubInfo?.title }}</h4>
+        <div class="row">
+          <div class="col-1">
+            <img src="{{ 'data:image/jpg;base64,' + epubInfo?.image }}" width="120" class="mr-2" />
+          </div>
+          <div class="col-11">
+            <p *ngIf="epubInfo?.creator">
+              <span>Autor: {{ epubInfo?.creator }}</span>
+              <span *ngIf="epubInfo?.date" style="float: right">{{ epubInfo?.date }}</span>
+            </p>
+            <p class="text-justify">{{ epubInfo?.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Chart Words -->
+  <div class="col-lg-6" *ngIf="barChartLabelsWords.length > 0">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{ numFreq }} <b>palabras</b> más frecuentes</h4>
+        <canvas
+          baseChart
+          [datasets]="barChartDataWords"
+          [labels]="barChartLabelsWords"
+          options="{scaleShowVerticalLines: false, responsive: true, barThickness: 10 }"
+          chartType="bar"
+          [colors]="[{ backgroundColor: '#a65a43' }]"
+          [legend]="false"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+  <!-- Chart Bigrams -->
+  <div class="col-lg-6" *ngIf="barChartLabelsBigrams.length > 0">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{ numFreq }} <b>bigramas</b> más frecuentes</h4>
+        <canvas
+          baseChart
+          [datasets]="barChartDataBigrams"
+          [labels]="barChartLabelsBigrams"
+          options="{scaleShowVerticalLines: false, responsive: true, barThickness: 10 }"
+          chartType="bar"
+          [colors]="[{ backgroundColor: '#743f2f' }]"
+          [legend]="false"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+  <!-- Chart Tigrams -->
+  <div class="col-lg-6" *ngIf="barChartLabelsTigrams.length > 0">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{ numFreq }} <b>tigramas</b> más frecuentes</h4>
+        <canvas
+          baseChart
+          [datasets]="barChartDataTigrams"
+          [labels]="barChartLabelsTigrams"
+          options="{scaleShowVerticalLines: false, responsive: true, barThickness: 10 }"
+          chartType="bar"
+          [colors]="[{ backgroundColor: '#445BA6' }]"
+          [legend]="false"
+        >
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>
