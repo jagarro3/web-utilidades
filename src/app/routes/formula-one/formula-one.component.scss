@@ -1,0 +1,35 @@
+.team-color-bar {
+  display: inline-block;
+  width: 5px;
+  height: 28px;
+  margin-right: 13px;
+}
+
+.team-name {
+  font-family: 'FormulaOneFont';
+}
+
+.header-teams {
+  font-family: 'FormulaOneFont';
+}
+
+.team:last-child {
+  padding-bottom: 0px !important;
+}
+
+.team > .team-name {
+  border-radius: 3px;
+}
+
+.team-position > span {
+  font-family: 'FormulaOneFont';
+  font-size: 25px;
+}
+
+.team-position {
+  width: 50px;
+  background: white;
+  text-align: center;
+  justify-content: center;
+  border-radius: 3px;
+}

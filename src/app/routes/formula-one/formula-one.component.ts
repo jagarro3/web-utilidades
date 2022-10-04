@@ -20,7 +20,7 @@ export class FormulaOneComponent {
     this.constructorStandingsSubscription ? this.constructorStandingsSubscription.unsubscribe() : null;
 
     this.constructorStandingsSubscription = this.formulaOneService.getConstructorStandings().subscribe(
-      (data) => (this.constructorStandings = data, console.log(this.constructorStandings)),
+      (data) => ((this.constructorStandings = data), console.log(this.constructorStandings)),
       (error) => console.error(error)
     );
   }

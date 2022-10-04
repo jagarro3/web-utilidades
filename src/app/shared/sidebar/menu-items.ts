@@ -34,7 +34,7 @@ export const ROUTES: RouteInfo[] = [
     {
         path: '/formula-one',
         title: 'Fórmula 1',
-        icon: 'fa fa-book',
+        icon: 'fa fa-flag-checkered',
         class: '',
         labelClass: 'label label-rouded label-themecolor',
         extralink: false,

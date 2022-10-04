@@ -1,12 +1,35 @@
 <div class="row">
   <!-- Constructores -->
-  <div class="col-lg-12">
+  <!-- <div class="col-lg-12">
     <div class="card">
       <div class="card-body">
         <h4 class="card-title">Constructores</h4>
         <ul *ngFor="let constructorStanding of constructorStandings">
-          <li>{{ constructorStanding.constructorInfo.teamName }} - {{ constructorStanding.points }}</li>
+          <li [style.color]="constructorStanding.settings.color">
+            <img [src]="constructorStanding.settings.icon" width="40" />
+            {{ constructorStanding.constructorInfo.teamName }} - {{ constructorStanding.points }}
+          </li>
         </ul>
+      </div>
+    </div>
+  </div> -->
+  <div class="col-lg-5">
+    <h4 class="mb-0 py-3 bg-white text-center header-teams">2022 TEAMS STANDINGS</h4>
+    <div class="card" style="background: #171717;">
+      <div class="card-body">
+        <div class="d-flex flex-row pb-2 team" *ngFor="let constructorStanding of constructorStandings; let i = index">
+          <div class="team-position mr-3">
+            <span>{{ i }}</span>
+          </div>
+          <div class="align-self-center">
+            <img [src]="constructorStanding.settings.icon" width="40" />
+          </div>
+          <div class="ml-3 pr-3 align-items-center d-flex justify-content-between team-name" style="width: 100%; color: white" [style.background]="constructorStanding.settings.color">
+            <!-- <span class="team-color-bar" [style.background]="constructorStanding.settings.color"></span> -->
+            <span class="team-name ml-3">{{ constructorStanding.constructorInfo.teamName }}</span> 
+            <span class="team-name">{{ constructorStanding.points }}</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
