@@ -755,43 +755,43 @@
         season: 2022,
         constructors: [{
           id: 71583,
-          icon: '../assets/images/formula-one/2022/constructors/icons/alfarom.png',
+          icon: 'assets/images/formula-one/2022/constructors/icons/alfarom.png',
           color: '#B12039'
         }, {
           id: 199493,
-          icon: '../assets/images/formula-one/2022/constructors/icons/alphatauri.png',
+          icon: 'assets/images/formula-one/2022/constructors/icons/alphatauri.png',
           color: '#4E7C9B'
         }, {
           id: 31205,
-          icon: '../assets/images/formula-one/2022/constructors/icons/alpine.png',
+          icon: 'assets/images/formula-one/2022/constructors/icons/alpine.png',
           color: '#2293D1'
         }, {
           id: 65311,
-          icon: '../assets/images/formula-one/2022/constructors/icons/astonma.png',
+          icon: 'assets/images/formula-one/2022/constructors/icons/astonma.png',
           color: '#2D826D'
         }, {
           id: 183197,
-          icon: '../assets/images/formula-one/2022/constructors/icons/ferrari.png',
+          icon: 'assets/images/formula-one/2022/constructors/icons/ferrari.png',
           color: '#ED1C24'
         }, {
           id: 143585,
-          icon: '../assets/images/formula-one/2022/constructors/icons/haas.png',
+          icon: 'assets/images/formula-one/2022/constructors/icons/haas.png',
           color: '#B6BABD'
         }, {
           id: 56525,
-          icon: '../assets/images/formula-one/2022/constructors/icons/mclaren.png',
+          icon: 'assets/images/formula-one/2022/constructors/icons/mclaren.png',
           color: '#F58020'
         }, {
           id: 58685,
-          icon: '../assets/images/formula-one/2022/constructors/icons/mercedes.png',
+          icon: 'assets/images/formula-one/2022/constructors/icons/mercedes.png',
           color: '#6CD3BF'
         }, {
           id: 33121,
-          icon: '../assets/images/formula-one/2022/constructors/icons/redbull.png',
+          icon: 'assets/images/formula-one/2022/constructors/icons/redbull.png',
           color: '#1E5BC6'
         }, {
           id: 163637,
-          icon: '../assets/images/formula-one/2022/constructors/icons/williams.png',
+          icon: 'assets/images/formula-one/2022/constructors/icons/williams.png',
           color: '#1E5BC6'
         }]
       }];
